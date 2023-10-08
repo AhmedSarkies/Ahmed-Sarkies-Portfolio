@@ -192,10 +192,10 @@ const Contact = () => {
                 </div>
                 <div className="col-md-12">
                   {success && (
-                    <h4 className="text-success">Sending Is Success</h4>
+                    <h4 className="text-success">Sent Successfully</h4>
                   )}
                   {error && (
-                    <h4 className="text-danger">Sending Is Failed</h4>
+                    <h4 className="text-danger">Sent Failed</h4>
                   )}
                   <div className="send">
                     <button
