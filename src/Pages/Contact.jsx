@@ -24,10 +24,10 @@ const Contact = () => {
     setLoading(true);
     emailjs
       .sendForm(
-        "service_kpy9ypj",
-        "template_c7nyflg",
+        import.meta.env.VITE_SERVICE_ID,
+        import.meta.env.VITE_TEMPLATE_ID,
         form.current,
-        "rg8XJ8fk0cVll6O5f"
+        import.meta.env.VITE_PUBLIC_KEY
       )
       .then(
         (result) => {
@@ -194,9 +194,7 @@ const Contact = () => {
                   {success && (
                     <h4 className="text-success">Sent Successfully</h4>
                   )}
-                  {error && (
-                    <h4 className="text-danger">Sent Failed</h4>
-                  )}
+                  {error && <h4 className="text-danger">Sent Failed</h4>}
                   <div className="send">
                     <button
                       className={`btn`}
