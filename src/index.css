@@ -687,7 +687,7 @@ nav ul .nav-item a.active {
 }
 @media screen and (max-width: 992px) {
   .logo {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
   }
   .navbar-toggler-icon {
     width: 1.1em;
@@ -770,6 +770,9 @@ nav ul .nav-item a.active {
   }
 }
 @media screen and (max-width: 500px) {
+  .logo {
+    font-size: 1.4rem;
+  }
   .homeName {
     font-size: 2rem;
   }
@@ -915,10 +918,14 @@ nav ul .nav-item a.active {
   position: relative;
   background-color: #fff;
   color: #000;
+  cursor: pointer;
   z-index: 0;
 }
 .send .btn:hover {
   color: #fff;
+}
+.send .spinner-border {
+  color: #f71735;
 }
 .send .btn::after {
   /* content: "";

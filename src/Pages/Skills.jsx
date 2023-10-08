@@ -16,7 +16,7 @@ const Skills = () => {
   return (
     <section className="container d-flex align-items-center flex-column p-0 pb-4">
       <Title title="Skills" />
-      <div className="row gap-5 mb-2 h-100 justify-content-center align-items-center mt-3">
+      <div className="row gap-5 mb-2 h-100 justify-content-center align-items-center mt-3 p-md-0 p-3">
         {skills.map((item, index) => {
           return (
             <motion.div

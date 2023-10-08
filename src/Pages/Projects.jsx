@@ -54,6 +54,9 @@ const Projects = () => {
                     <h5 className=" text-light">{title}</h5>
                   </Link>
                   <div className="d-flex  gap-1 gap-sm-2">
+                    <Link to={liveDemo} target="_blank" className="btn">
+                      Live Demo
+                    </Link>
                     <Link to={repoUrl} target="_blank" className="btn">
                       View Code
                     </Link>
@@ -66,9 +69,6 @@ const Projects = () => {
                         UI Design
                       </Link>
                     )}
-                    <Link to={liveDemo} target="_blank" className="btn">
-                      Live Demo
-                    </Link>
                   </div>
                 </div>
               </div>

@@ -1,9 +1,53 @@
-import { social } from "../data";
-import { Title } from "../Component";
-import { motion } from "framer-motion";
+import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 
+import { motion } from "framer-motion";
+import emailjs from "@emailjs/browser";
+
+import { social } from "../data";
+import { Title } from "../Component";
+
 const Contact = () => {
+  const form = useRef();
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
+  const [success, setSuccess] = useState(false);
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    setError(false);
+    setSuccess(false);
+    setLoading(true);
+    emailjs
+      .sendForm(
+        "service_kpy9ypj",
+        "template_c7nyflg",
+        form.current,
+        "rg8XJ8fk0cVll6O5f"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          setError(false);
+          setSuccess(true);
+          setLoading(false);
+          setName("");
+          setEmail("");
+          setSubject("");
+          setMessage("");
+        },
+        (error) => {
+          setError(true);
+          setSuccess(false);
+          setLoading(false);
+          console.log(error.text);
+        }
+      );
+  };
   const welcomeTitle = {
     hidden: {
       x: "-100%",
@@ -83,38 +127,52 @@ const Contact = () => {
             <div className="sm-title">
               <h3>Get In Touch</h3>
             </div>
-            <form id="contact-form" method="POST">
+            <form
+              id="contact-form"
+              method="POST"
+              ref={form}
+              onSubmit={sendEmail}
+            >
               <div className="row">
                 <div className="col-md-6">
                   <div className="form-group">
                     <input
-                      name="Name"
+                      name="from_name"
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
                       id="name"
                       placeholder="Name *"
                       className="form-control"
                       type="text"
+                      required
                     />
                   </div>
                 </div>
                 <div className="col-md-6">
                   <div className="form-group">
                     <input
-                      name="Email"
+                      name="user_email"
                       id="email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
                       placeholder="Email *"
                       className="form-control"
                       type="email"
+                      required
                     />
                   </div>
                 </div>
                 <div className="col-12">
                   <div className="form-group">
                     <input
-                      name="Subject"
+                      name="subject"
+                      value={subject}
+                      onChange={(e) => setSubject(e.target.value)}
                       id="subject"
                       placeholder="Subject *"
                       className="form-control"
                       type="text"
+                      required
                     />
                   </div>
                 </div>
@@ -122,17 +180,35 @@ const Contact = () => {
                   <div className="form-group">
                     <textarea
                       name="message"
+                      value={message}
+                      onChange={(e) => setMessage(e.target.value)}
                       id="message"
                       placeholder="Your message *"
                       rows="3"
                       className="form-control"
+                      required
                     ></textarea>
                   </div>
                 </div>
                 <div className="col-md-12">
+                  {success && (
+                    <h4 className="text-success">Sending Is Success</h4>
+                  )}
+                  {error && (
+                    <h4 className="text-danger">Sending Is Failed</h4>
+                  )}
                   <div className="send">
-                    <button className="btn " type="button" value="Send">
-                      <span>Contact Us</span>
+                    <button
+                      className={`btn`}
+                      type="submit"
+                      value="Send"
+                      disabled={loading}
+                    >
+                      {loading ? (
+                        <span className="spinner-border" role="status"></span>
+                      ) : (
+                        <span>Contact Us</span>
+                      )}
                     </button>
                   </div>
                 </div>

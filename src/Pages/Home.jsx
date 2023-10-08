@@ -7,7 +7,7 @@ import { FaDownload } from "react-icons/fa";
 import { Fragment } from "react";
 const Home = () => {
   const homeTitle = useTypewriter({
-    words: ["Developer", "Designer", "Trainer"],
+    words: ["Developer", "Engineer", "Designer"],
     loop: {},
     typeSpeed: 100,
     deleteSpeed: 80,
