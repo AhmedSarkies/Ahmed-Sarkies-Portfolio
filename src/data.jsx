@@ -10,6 +10,7 @@ import {
   FaVuejs,
   FaSass,
   FaBootstrap,
+  FaAngular,
   // FaFacebookSquare,
   // FaTwitter,
   // FaNpm,
@@ -23,7 +24,12 @@ import {
   BiLogoTypescript,
   BiLogoTailwindCss,
 } from "react-icons/bi";
-import { SiAntdesign, SiMui, SiStyledcomponents, SiVuetify } from "react-icons/si";
+import {
+  SiAntdesign,
+  SiMui,
+  SiStyledcomponents,
+  SiVuetify,
+} from "react-icons/si";
 import { TbMobiledata } from "react-icons/tb";
 // import { GoCommandPalette } from "react-icons/go";
 
@@ -72,10 +78,11 @@ export const skills = [
   { id: 5, icon: <BiLogoJquery />, text: "jQuery" },
   { id: 6, icon: <FaReact />, text: "React.js" },
   { id: 7, icon: <BiLogoRedux />, text: "Redux" },
+  { id: 8, icon: <FaAngular />, text: "Angular" },
   { id: 8, icon: <FaVuejs />, text: "VueJs" },
   { id: 9, icon: <FaSass />, text: "SASS" },
-  { id: 10, icon: <SiMui />, text: "Material-UI" },
   { id: 11, icon: <BiLogoTailwindCss />, text: "Tailwind css" },
+  { id: 10, icon: <SiMui />, text: "Material-UI" },
   { id: 12, icon: <SiStyledcomponents />, text: "Styled components" },
   { id: 13, icon: <SiAntdesign />, text: "Ant Design" },
   { id: 14, icon: <FaBootstrap />, text: "Bootstrap" },
