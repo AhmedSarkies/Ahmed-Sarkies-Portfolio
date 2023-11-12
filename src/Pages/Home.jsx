@@ -76,7 +76,7 @@ const Home = () => {
                   animate={"visible"}
                   transition={{ delay: 0.38 }}
                   exit={{ x: "-100%", opacity: 0 }}
-                  href="https://drive.google.com/file/d/1zxJCs6lZjfp1qQVSRW_gn-PhzbSmhv4F/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1RTSGomF-YHm4ihsZAmpt8qGyKSymNeT-/view?usp=sharing"
                 >
                   <button className="button rounded" type="button">
                     <span className="button__text">Download CV</span>
