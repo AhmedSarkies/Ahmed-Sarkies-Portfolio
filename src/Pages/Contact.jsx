@@ -6,6 +6,7 @@ import emailjs from "@emailjs/browser";
 
 import { social } from "../data";
 import { Title } from "../Component";
+import { toast } from "react-toastify";
 
 const Contact = () => {
   const form = useRef();
@@ -14,13 +15,9 @@ const Contact = () => {
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(false);
-  const [success, setSuccess] = useState(false);
 
   const sendEmail = (e) => {
     e.preventDefault();
-    setError(false);
-    setSuccess(false);
     setLoading(true);
     emailjs
       .sendForm(
@@ -30,21 +27,17 @@ const Contact = () => {
         import.meta.env.VITE_PUBLIC_KEY
       )
       .then(
-        (result) => {
-          console.log(result.text);
-          setError(false);
-          setSuccess(true);
+        () => {
           setLoading(false);
           setName("");
           setEmail("");
           setSubject("");
           setMessage("");
+          toast.success("Message Sent Successfully");
         },
-        (error) => {
-          setError(true);
-          setSuccess(false);
+        () => {
           setLoading(false);
-          console.log(error.text);
+          toast.error("Message Not Sent");
         }
       );
   };
@@ -191,10 +184,6 @@ const Contact = () => {
                   </div>
                 </div>
                 <div className="col-md-12">
-                  {success && (
-                    <h4 className="text-success">Sent Successfully</h4>
-                  )}
-                  {error && <h4 className="text-danger">Sent Failed</h4>}
                   <div className="send">
                     <button
                       className={`btn`}
