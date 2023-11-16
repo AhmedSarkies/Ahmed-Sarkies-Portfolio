@@ -55,7 +55,7 @@ const Home = () => {
               </motion.h3>
               {[
                 "Need a professional web developer?",
-                "You've come to the best place.",
+                "You've come to the right person.",
               ].map((text, index) => (
                 <motion.p
                   key={index}
