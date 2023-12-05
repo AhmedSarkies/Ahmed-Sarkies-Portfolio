@@ -57,7 +57,7 @@ const AboutMe = () => {
             {[
               {
                 text: "Download CV",
-                link: "https://drive.google.com/file/d/1ELURsc0T6jAUo75g2bo-DM_fWgNIRAMA/view?usp=sharing",
+                link: "https://drive.google.com/file/d/1lAFgjqEv8G1YtHBJj1zjzjzVEmwG8nJJ/view?usp=sharing",
               },
               {
                 text: "Get in touch",
