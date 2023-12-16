@@ -58,14 +58,17 @@ const AboutMe = () => {
               {
                 text: "Download CV",
                 link: "https://drive.google.com/file/d/1a_5d2xzDmZWBAzOS0jw6UgRIhZMWB8mj/view?usp=sharing",
+                target: "_blank",
               },
               {
                 text: "Get in touch",
                 link: "/contact",
+                target: "_self",
               },
               {
                 text: "Show Skills",
                 link: "/skills",
+                target: "_self",
               },
             ].map((item, index) => (
               <motion.div
