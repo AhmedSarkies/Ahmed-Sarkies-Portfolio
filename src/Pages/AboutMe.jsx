@@ -80,7 +80,7 @@ const AboutMe = () => {
                 transition={{ delay: 0.05 + index * 0.05 }}
                 exit={{ opacity: 0, y: "200%" }}
               >
-                <Link to={item.link}>
+                <Link to={item.link} target={item.target}>
                   <button type="button" className="btn">
                     {item.text}
                   </button>
