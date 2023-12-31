@@ -11,8 +11,8 @@ import {
   FaSass,
   FaBootstrap,
   FaAngular,
-  // FaFacebookSquare,
-  // FaTwitter,
+  FaFacebookSquare,
+  FaTwitter,
   // FaNpm,
   // FaFigma,
   // FaWordpress,
@@ -44,30 +44,30 @@ export const navPages = [
 
 export const social = [
   {
-    id: 1,
-    icon: <FaLinkedin />,
-    link: "https://www.linkedin.com/in/ahmedsarkies/",
-  },
-  {
     id: 2,
     icon: <FaGithub />,
     link: "https://github.com/ahmedsarkies",
   },
   {
+    id: 1,
+    icon: <FaLinkedin />,
+    link: "https://www.linkedin.com/in/ahmedsarkies",
+  },
+  {
+    id: 4,
+    icon: <FaFacebookSquare />,
+    link: "https://www.facebook.com/ahmedsarkies",
+  },
+  {
+    id: 5,
+    icon: <FaTwitter />,
+    link: "https://twitter.com/ahmedsarkies",
+  },
+  {
     id: 3,
     icon: <FaInstagram />,
-    link: "https://www.instagram.com/ahmedsarkes11/",
+    link: "https://www.instagram.com/ahmed.sarkies",
   },
-  // {
-  //   id: 4,
-  //   icon: <FaFacebookSquare />,
-  //   link: "https://www.facebook.com/AhmedSarkes11/",
-  // },
-  // {
-  //   id: 5,
-  //   icon: <FaTwitter />,
-  //   link: "https://twitter.com/AhmedSarkes11",
-  // },
 ];
 
 export const skills = [
