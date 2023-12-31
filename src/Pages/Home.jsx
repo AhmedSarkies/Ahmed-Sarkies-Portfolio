@@ -27,7 +27,7 @@ const Home = () => {
       <HomeSocial />
       <section className="page-container container d-grid place-items-center">
         <div className="row justify-content-center align-items-center">
-          <div className="col-lg-6">
+          <div className="col-lg-6 p-0">
             <div className="welcome">
               <motion.h6
                 variants={welcomeTitle}
