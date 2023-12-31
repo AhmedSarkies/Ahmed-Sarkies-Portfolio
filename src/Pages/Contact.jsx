@@ -86,7 +86,7 @@ const Contact = () => {
                 </Link>
               </p>
             </div>
-            <div className="d-flex gap-3 mt-3">
+            <div className="d-flex gap-1 gap-xs-3 mt-3">
               {social.map((item, index) => {
                 return (
                   <motion.span
