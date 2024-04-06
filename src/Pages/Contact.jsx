@@ -67,8 +67,8 @@ const Contact = () => {
                 <h3>Email</h3>
               </div>
               <p>
-                <a href="mailto:ahmedsarkies@gmail.com">
-                  ahmedsarkies@gmail.com
+                <a href="mailto:AhmedSarkies@gmail.com">
+                  AhmedSarkies@gmail.com
                 </a>
               </p>
             </div>
@@ -81,9 +81,9 @@ const Contact = () => {
                   +20 0109 839 7413
                 </Link>
                 <br />
-                <Link to={"https://wa.me/+201014270521"} target="_blank">
+                {/* <Link to={"https://wa.me/+201014270521"} target="_blank">
                   +20 0101 427 0521
-                </Link>
+                </Link> */}
               </p>
             </div>
             <div className="d-flex gap-1 gap-xs-3 mt-3">
