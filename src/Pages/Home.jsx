@@ -76,7 +76,7 @@ const Home = () => {
                   animate={"visible"}
                   transition={{ delay: 0.38 }}
                   exit={{ x: "-100%", opacity: 0 }}
-                  href="https://drive.google.com/file/d/12oUOQGdGHocetlauXC_U8x80Me56sNi9/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1J4zIkkHWFWWhheJPmeMpaglEJ0j1tDTu/view?usp=sharing"
                   target="_blank"
                 >
                   <button className="button rounded" type="button">
